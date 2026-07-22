@@ -16,12 +16,181 @@ void setup() {
     while (1);
   }
 
+}
+
+void loop() {
   display.clearDisplay();
-  display.setTextColor(SSD1306_WHITE);
-  display.setTextSize(1);
-  display.setCursor(0, 0);
-  display.println("Hello, Jhon Paul");
-  display.display();
+    // string 3
+    display.setTextColor(1);
+    display.setTextSize(2);
+    display.setTextWrap(false);
+    display.setCursor(47, 15);
+    display.print("Hi!");
+    // string 3
+    display.setTextSize(1);
+    display.setCursor(41, 29);
+    display.print("");
+    // string 3
+    display.setCursor(23, 39);
+    display.print("Sir, Jhon Paul");
+    display.display();
+  
+  delay(1500);
+
+  display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading.");
+    display.display();
+
+  delay(500);
+
+  display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading..");
+    display.display();
+
+  delay(500);
+
+    display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading...");
+    display.display();
+
+  delay(500);
+
+    display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading....");
+    display.display();
+  delay(500);
+
+  display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading.....");
+    display.display();
+
+  delay(500);
+
+    display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading......");
+    display.display();
+
+  delay(500);
+
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(4, 5);
+    display.print("Hello sir Jhon Paul");
+    // string 3
+    display.setCursor(2, 28);
+    display.print("WELCOME BACK ON TRACK");
+    // string 4
+    display.setCursor(4, 52);
+    display.print("Loading.......");
+    display.display();
+
+  delay(500);
+
+    display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading........");
+    display.display();
+
+  delay(500);
+
+  display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading.........");
+    display.display();
+
+  delay(500);
+
+  display.clearDisplay();
+    // string 3
+    display.setTextColor(1);
+    display.setTextWrap(false);
+    display.setCursor(29, 16);
+    display.print("WELCOME BACK");
+    // string 3
+    display.setCursor(41, 29);
+    display.print("ON TRACK");
+    // string 4
+    display.setCursor(2, 55);
+    display.print("Loading......... done");
+    display.display();
 
   delay(3000);
 
@@ -35,7 +204,7 @@ void setup() {
     display.print("Smart Study AI ");
     // string 3
     display.setCursor(43, 38);
-    display.print("Chatbot");
+    display.print("Platform");
     display.display();
 
     delay(5000);
@@ -96,6 +265,4 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Lights still ON?");
     display.display();
-}
-
-void loop() {} 
+} 
