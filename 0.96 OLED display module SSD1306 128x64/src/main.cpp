@@ -16,9 +16,6 @@ void setup() {
     while (1);
   }
 
-}
-
-void loop() {
   display.clearDisplay();
     // string 3
     display.setTextColor(1);
@@ -265,4 +262,8 @@ void loop() {
     display.setCursor(4, 52);
     display.print("Lights still ON?");
     display.display();
+}
+
+void loop() {
+  
 } 
