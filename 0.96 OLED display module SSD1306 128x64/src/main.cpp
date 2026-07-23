@@ -15,7 +15,9 @@ void setup() {
     Serial.println("OLED init failed!");
     while (1);
   }
+}
 
+void showGreeting() {
   display.clearDisplay();
     // string 3
     display.setTextColor(1);
@@ -31,9 +33,11 @@ void setup() {
     display.setCursor(23, 39);
     display.print("Sir, Jhon Paul");
     display.display();
-
   delay(2000);
+  }
 
+void showLoadingAnimation() {
+  //start of loading animation
   display.clearDisplay();
     // string 2
     display.setTextColor(1);
@@ -47,7 +51,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading.");
     display.display();
-  
   delay(200);
 
   display.setTextColor(1);
@@ -61,7 +64,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading..");
     display.display();
-
   delay(200);
 
   display.setTextColor(1);
@@ -75,7 +77,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading...");
     display.display();
-
   delay(200);
 
     display.setTextColor(1);
@@ -89,7 +90,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading....");
     display.display();
-
   delay(200);
 
     display.setTextColor(1);
@@ -103,7 +103,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading.....");
     display.display();
-
   delay(200);
 
   display.setTextColor(1);
@@ -117,7 +116,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading......");
     display.display();
-
   delay(200);
 
     display.setTextColor(1);
@@ -131,7 +129,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading.......");
     display.display();
-
   delay(200);
 
     display.setTextColor(1);
@@ -145,7 +142,6 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading........");
     display.display();
-
   delay(200);
 
     display.setTextColor(1);
@@ -159,11 +155,10 @@ void setup() {
     display.setCursor(4, 52);
     display.print("Loading......... done");
     display.display();
-
-  
-
   delay(3000);
+}
 
+void showLogo() {
   display.clearDisplay();
     // rect 1
     display.drawRect(17, 13, 91, 43, 1);
@@ -176,10 +171,11 @@ void setup() {
     display.setCursor(43, 38);
     display.print("Platform");
     display.display();
-
     delay(5000);
+}
 
-    display.clearDisplay();
+void showFocusScreen() {
+  display.clearDisplay();
     // rect 1
     display.drawRect(2, 1, 123, 62, 1);
     // string 2
@@ -197,10 +193,11 @@ void setup() {
     display.setCursor(5, 53);
     display.print("Studying........");
     display.display();
-
     delay(5000);
+}
 
-    display.clearDisplay();
+void showBreakScreen() {
+  display.clearDisplay();
     // rect 1
     display.drawRect(1, 1, 124, 62, 1);
     // string 2
@@ -217,10 +214,11 @@ void setup() {
     // circle 5
     display.drawCircle(7, 32, 4, 1);
     display.display();
-
     delay(5000);
+}
 
-    display.clearDisplay();
+void showIdleScreen() {
+  display.clearDisplay();
     // rect 1
     display.drawRect(1, 1, 124, 62, 1);
     // string 2
@@ -237,4 +235,7 @@ void setup() {
     display.display();
 }
 
-void loop() {} 
+
+void loop() {
+  
+} 
