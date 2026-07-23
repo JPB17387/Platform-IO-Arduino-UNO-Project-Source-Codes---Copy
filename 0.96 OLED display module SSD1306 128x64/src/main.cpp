@@ -8,6 +8,16 @@
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
+// ==============================
+// Function Prototypes
+// ==============================
+void showGreeting();
+void showLoadingAnimation();
+void showLogo();
+void showFocusScreen();
+void showBreakScreen();
+void showIdleScreen();
+
 void setup() {
   Serial.begin(115200);
 
@@ -15,188 +25,123 @@ void setup() {
     Serial.println("OLED init failed!");
     while (1);
   }
+
+  showGreeting();
+  showLoadingAnimation();
+  showLogo();
+  showFocusScreen();
+  showBreakScreen();
+  showIdleScreen();
 }
 
+void loop() {
+  // Nothing yet
+}
+
+// ==============================
+// Greeting Screen
+// ==============================
 void showGreeting() {
   display.clearDisplay();
-    // string 3
-    display.setTextColor(1);
-    display.setTextSize(2);
-    display.setTextWrap(false);
-    display.setCursor(47, 17);
-    display.print("Hi!");
-    // string 3
-    display.setTextSize(1);
-    display.setCursor(41, 29);
-    display.print("");
-    // string 3
-    display.setCursor(23, 39);
-    display.print("Sir, Jhon Paul");
-    display.display();
+  display.setTextColor(SSD1306_WHITE);
+  display.setTextSize(2);
+  display.setTextWrap(false);
+  display.setCursor(47, 17);
+  display.print("Hi!");
+
+  display.setTextSize(1);
+  display.setCursor(23, 39);
+  display.print("Sir, Jhon Paul");
+
+  display.display();
   delay(2000);
+}
+
+// ==============================
+// Loading Animation
+// ==============================
+void showLoadingAnimation() {
+
+  for (int dots = 1; dots <= 9; dots++) {
+
+    display.clearDisplay();
+
+    display.setTextColor(SSD1306_WHITE);
+
+    display.setCursor(4, 5);
+    display.print("Hello Sir Jhon Paul");
+
+    display.setCursor(2, 28);
+    display.print("WELCOME BACK ON TRACK");
+
+    display.setCursor(4, 52);
+    display.print("Loading");
+
+    for (int i = 0; i < dots; i++) {
+      display.print(".");
+    }
+
+    display.display();
+    delay(200);
   }
 
-void showLoadingAnimation() {
-  //start of loading animation
-  display.clearDisplay();
-    // string 2
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading.");
-    display.display();
-  delay(200);
+  display.print(" done");
+  display.display();
 
-  display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading..");
-    display.display();
-  delay(200);
-
-  display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading...");
-    display.display();
-  delay(200);
-
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading....");
-    display.display();
-  delay(200);
-
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading.....");
-    display.display();
-  delay(200);
-
-  display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading......");
-    display.display();
-  delay(200);
-
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading.......");
-    display.display();
-  delay(200);
-
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading........");
-    display.display();
-  delay(200);
-
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Hello sir Jhon Paul");
-    // string 3
-    display.setCursor(2, 28);
-    display.print("WELCOME BACK ON TRACK");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Loading......... done");
-    display.display();
-  delay(3000);
+  delay(1500);
 }
 
+// ==============================
+// Logo Screen
+// ==============================
 void showLogo() {
+
   display.clearDisplay();
-    // rect 1
-    display.drawRect(17, 13, 91, 43, 1);
-    // string 2
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(21, 22);
-    display.print("Smart Study AI ");
-    // string 3
-    display.setCursor(43, 38);
-    display.print("Platform");
-    display.display();
-    delay(5000);
+
+  display.drawRect(17, 13, 91, 43, SSD1306_WHITE);
+
+  display.setCursor(21, 22);
+  display.print("Smart Study AI");
+
+  display.setCursor(43, 38);
+  display.print("Platform");
+
+  display.display();
+
+  delay(5000);
 }
 
+// ==============================
+// Focus Screen
+// ==============================
 void showFocusScreen() {
+
   display.clearDisplay();
-    // rect 1
-    display.drawRect(2, 1, 123, 62, 1);
-    // string 2
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(6, 5);
-    display.print("Focus Mode:");
-    // string 3
-    display.setCursor(6, 24);
-    display.print("Time: 24:53");
-    // string 4
-    display.setCursor(6, 34);
-    display.print("Session: 3");
-    // string 5
-    display.setCursor(5, 53);
-    display.print("Studying........");
-    display.display();
-    delay(5000);
+
+  display.drawRect(2, 1, 123, 62, SSD1306_WHITE);
+
+  display.setCursor(6, 5);
+  display.print("Focus Mode:");
+
+  display.setCursor(6, 24);
+  display.print("Time: 24:53");
+
+  display.setCursor(6, 34);
+  display.print("Session: 3");
+
+  display.setCursor(5, 53);
+  display.print("Studying...");
+
+  display.display();
+
+  delay(5000);
 }
 
+// ==============================
+// Break Screen
+// ==============================
 void showBreakScreen() {
+
   display.clearDisplay();
     // rect 1
     display.drawRect(1, 1, 124, 62, 1);
@@ -218,24 +163,21 @@ void showBreakScreen() {
 }
 
 void showIdleScreen() {
+
   display.clearDisplay();
-    // rect 1
-    display.drawRect(1, 1, 124, 62, 1);
-    // string 2
-    display.setTextColor(1);
-    display.setTextWrap(false);
-    display.setCursor(4, 5);
-    display.print("Idle Mode");
-    // string 3
-    display.setCursor(5, 29);
-    display.print("No Motion Detected");
-    // string 4
-    display.setCursor(4, 52);
-    display.print("Lights still ON?");
-    display.display();
+
+  display.drawRect(1, 1, 124, 62, SSD1306_WHITE);
+
+  display.setCursor(4, 5);
+  display.print("Idle Mode");
+
+  display.setCursor(5, 29);
+  display.print("No Motion Detected");
+
+  display.setCursor(4, 52);
+  display.print("Lights still ON?");
+
+  display.display();
+
+  delay(5000);
 }
-
-
-void loop() {
-  
-} 

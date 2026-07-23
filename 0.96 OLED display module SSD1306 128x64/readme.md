@@ -13,4 +13,6 @@ Wiring:
     SDA pin - A4 slot
 ```
 
-##
+## Notice
+
+> Last update July 23, 2026.
